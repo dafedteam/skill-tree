@@ -14,4 +14,4 @@ git tag v0.0.1 -m 'Added new technology'
 git push origin v0.0.1
 ```
 
-![skills](/.github/img/sample.png)
+![skills](/.github/img/skills.png)
