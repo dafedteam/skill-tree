@@ -10,7 +10,7 @@ digraph {
         vcs [label="VCS" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_vcs {
             graph[style=dotted];
-            git [label="git" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            git [label="git" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://git-scm.com"];
 
             vcs -> git [style=dashed, color="#2c78e4" arrowhead=none];
         }
@@ -28,8 +28,8 @@ digraph {
         ide [label="IDE" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_ide {
             graph[style=dotted];
-            datagrip [label="DataGrip" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            phpstorm [label="PHPStorm" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            datagrip [label="DataGrip" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.jetbrains.com/datagrip/"];
+            phpstorm [label="PHPStorm" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.jetbrains.com/phpstorm/"];
 
             ide -> datagrip [style=dashed, color="#2c78e4" arrowhead=none];
             ide -> phpstorm [style=dashed, color="#2c78e4" arrowhead=none];
@@ -39,11 +39,11 @@ digraph {
         os [label="OS" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_os {
             graph[style=dotted];
-            ubuntu [label="Ubuntu" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            i3wm [label="i3wm" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica"];
-            tmux [label="tmux" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica"];
-            zsh [label="zsh" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica"];
-            make [label="Makefile" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica"];
+            ubuntu [label="Ubuntu" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://regolith-linux.org"];
+            i3wm [label="i3wm" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica" URL="https://i3wm.org"];
+            tmux [label="tmux" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica" URL="https://github.com/tmux/tmux/wiki/Getting-Started"];
+            zsh [label="zsh" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica" URL="https://ohmyz.sh"];
+            make [label="Makefile" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica" URL="https://www.gnu.org/software/make/"];
 
             os -> ubuntu [style=dashed, color="#2c78e4" arrowhead=none];
             ubuntu -> i3wm [style=dashed, color="#9900ff" arrowhead=none];
@@ -62,8 +62,8 @@ digraph {
         database [label="DB" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_database {
             graph[style=dotted];
-            mongodb [label="MongoDB" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            mysql [label="MySQL" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            mongodb [label="MongoDB" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.mongodb.com"];
+            mysql [label="MySQL" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.mysql.com"];
 
             database -> mongodb [style=dashed, color="#2c78e4" arrowhead=none];
             database -> mysql [style=dashed, color="#2c78e4" arrowhead=none];
@@ -73,7 +73,7 @@ digraph {
         message_brokers [label="Message Brokers" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_message_brokers {
             graph[style=dotted];
-            rabbitmq [label="Rabbit MQ" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            rabbitmq [label="Rabbit MQ" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.rabbitmq.com"];
             message_brokers -> rabbitmq [style=dashed, color="#2c78e4" arrowhead=none];
         }
         back_end -> message_brokers [color="#2c78e4" arrowhead=none];
@@ -81,8 +81,8 @@ digraph {
         servers [label="Web Servers" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_servers {
             graph[style=dotted];
-            nginx [label="nginx" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            apache [label="httpd" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            nginx [label="nginx" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.nginx.com"];
+            apache [label="httpd" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://httpd.apache.org"];
 
             servers -> nginx [style=dashed, color="#2c78e4" arrowhead=none];
             servers -> apache [style=dashed, color="#2c78e4" arrowhead=none];
@@ -95,7 +95,7 @@ digraph {
             php_docs [label="Docs" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_docs {
                 graph[style=dotted];
-                doxygen [label="Doxygen" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                doxygen [label="Doxygen" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.doxygen.nl/index.html"];
 
                 php_docs -> doxygen [style=dashed, color="#2c78e4" arrowhead=none];
             }
@@ -104,9 +104,9 @@ digraph {
             php_ext [label="Extensions" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_ext {
                 graph[style=dotted];
-                pecl [label="pecl" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                xdebug [label="xdebug" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                kcachegrind [label="kcachegrind" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica"];
+                pecl [label="pecl" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://pecl.php.net"];
+                xdebug [label="xdebug" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://xdebug.org"];
+                kcachegrind [label="kcachegrind" shape="box" style=filled, fillcolor="#d5d5d5" fontname = "helvetica" URL="https://kcachegrind.github.io/html/Home.html"];
 
                 php_ext -> pecl [style=dashed, color="#2c78e4" arrowhead=none];
                 php_ext -> xdebug [style=dashed, color="#2c78e4" arrowhead=none];
@@ -117,10 +117,10 @@ digraph {
             php_testing [label="Testing" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_testing {
                 graph[style=dotted];
-                postman [label="Postman" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                selenium [label="Selenium" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                behat [label="Behat" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                phpunit [label="PHPUnit" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                postman [label="Postman" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.postman.com"];
+                selenium [label="Selenium" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.selenium.dev/documentation/en/webdriver/"];
+                behat [label="Behat" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://docs.behat.org/en/latest/"];
+                phpunit [label="PHPUnit" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://phpunit.de"];
 
                 php_testing -> phpunit [style=dashed, color="#2c78e4" arrowhead=none];
                 php_testing -> behat [style=dashed, color="#2c78e4" arrowhead=none];
@@ -129,12 +129,12 @@ digraph {
             }
             php -> php_testing [color="#2c78e4" arrowhead=none];
 
-            php_qa [label="QA" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
+            php_qa [label="QA" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica" URL="https://phpqa.io/index.html"];
             subgraph cluster_php_qa {
                 graph[style=dotted];
-                phplint [label="phplint" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                phpcs [label="phpcs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                phpcbf [label="phpcbf" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                phplint [label="phplint" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://github.com/overtrue/phplint"];
+                phpcs [label="phpcs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://github.com/squizlabs/PHP_CodeSniffer"];
+                phpcbf [label="phpcbf" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://github.com/squizlabs/PHP_CodeSniffer"];
 
                 php_qa -> phplint [style=dashed, color="#2c78e4" arrowhead=none];
                 php_qa -> phpcs [style=dashed, color="#2c78e4" arrowhead=none];
@@ -145,12 +145,14 @@ digraph {
             php_packages [label="Packages" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_packages {
                 graph[style=dotted];
-                dotenv [label="dotenv" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                tcpdf [label="TCPDF, FPDI, etc." shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                symfony [label="Symfony" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                league [label="PHP League" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                composer [label="composer" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                more [label="many more..." shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                dotenv [label="dotenv" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://packagist.org/packages/vlucas/phpdotenv"];
+                tcpdf [label="TCPDF, FPDI, etc." shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://packagist.org/packages/tecnickcom/tcpdf"];
+                symfony [label="Symfony" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://symfony.com/components"];
+                league [label="PHP League" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://thephpleague.com"];
+                composer [label="composer" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://getcomposer.org"];
 
+                php_packages -> more [style=dashed, color="#2c78e4" arrowhead=none];
                 php_packages -> composer [style=dashed, color="#2c78e4" arrowhead=none];
                 php_packages -> league [style=dashed, color="#2c78e4" arrowhead=none];
                 php_packages -> symfony [style=dashed, color="#2c78e4" arrowhead=none];
@@ -162,8 +164,8 @@ digraph {
             php_frameworks [label="Frameworks" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_frameworks {
                 graph[style=dotted];
-                cakephp [label="CakePHP" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-                laravel [label="Laravel" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+                cakephp [label="CakePHP" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://cakephp.org"];
+                laravel [label="Laravel" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://laravel.com"];
 
                 php_frameworks -> cakephp [style=dashed, color="#2c78e4" arrowhead=none];
                 php_frameworks -> laravel [style=dashed, color="#2c78e4" arrowhead=none];
@@ -184,11 +186,11 @@ digraph {
 
         subgraph cluster_aws {
             graph[style=dotted];
-            aws [label="AWS" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
-            iam [label="IAM" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            ec2 [label="EC2" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            rds [label="RDS" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            s3 [label="S3" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            aws [label="AWS" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica" URL="https://aws.amazon.com"];
+            iam [label="IAM" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://aws.amazon.com/iam/"];
+            ec2 [label="EC2" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://aws.amazon.com/ec2/"];
+            rds [label="RDS" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://aws.amazon.com/rds/"];
+            s3 [label="S3" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://aws.amazon.com/s3/"];
 
             aws -> iam [style=dashed, color="#2c78e4" arrowhead=none];
             aws -> ec2 [style=dashed, color="#2c78e4" arrowhead=none];
@@ -206,8 +208,8 @@ digraph {
         front_end_frameworks [label="Frameworks" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_frameworks {
             graph[style=dotted];
-            angularjs [label="angularjs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            bootstrap [label="bootstrap" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            angularjs [label="angularjs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://angularjs.org"];
+            bootstrap [label="bootstrap" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://getbootstrap.com"];
 
             front_end_frameworks -> bootstrap [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_frameworks -> angularjs [style=dashed, color="#2c78e4" arrowhead=none];
@@ -217,10 +219,10 @@ digraph {
         front_end_packages [label="Packages" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_packages {
             graph[style=dotted];
-            npm [label="npm/nvm" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            toastr [label="toastr" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            sweetalert [label="sweetalert" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            uigrid [label="ui-grid" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            npm [label="npm/nvm" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.npmjs.com"];
+            toastr [label="toastr" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.npmjs.com/package/toastr"];
+            sweetalert [label="sweetalert" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.npmjs.com/package/sweetalert2"];
+            uigrid [label="ui-grid" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="http://ui-grid.info"];
 
             front_end_packages -> npm [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_packages -> toastr [style=dashed, color="#2c78e4" arrowhead=none];
@@ -231,7 +233,7 @@ digraph {
 
         front_end_runners [label="Runners" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_runners {
-            gulp [label="gulp" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            gulp [label="gulp" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://gulpjs.com"];
 
             front_end_runners -> gulp [style=dashed, color="#2c78e4" arrowhead=none];
         }
@@ -240,9 +242,9 @@ digraph {
         front_end_ssg [label="SSG" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_ssg {
             graph[style=dotted];
-            nuxt [label="nuxt" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            mkdocs [label="mkdocs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            hugo [label="hugo" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            nuxt [label="nuxt" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://nuxtjs.org"];
+            mkdocs [label="mkdocs" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.mkdocs.org"];
+            hugo [label="hugo" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://gohugo.io"];
 
             front_end_ssg -> mkdocs [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_ssg -> nuxt [style=dashed, color="#2c78e4" arrowhead=none];
@@ -253,16 +255,15 @@ digraph {
         front_end_ci_cd [label="CI/CD" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_ci_cd {
             graph[style=dotted];
-            bitbucket_pipelines [label="Bitbucket Pipelines" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            github_actions [label="Github Actions" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
-            netlify [label="Netlify" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica"];
+            bitbucket_pipelines [label="Bitbucket Pipelines" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://bitbucket.org/product/features/pipelines"];
+            github_actions [label="Github Actions" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://github.com/features/actions"];
+            netlify [label="Netlify" shape="box" style=filled, fillcolor="#ffe59a" fontname = "helvetica" URL="https://www.netlify.com"];
 
             front_end_ci_cd -> netlify [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_ci_cd -> github_actions [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_ci_cd -> bitbucket_pipelines [style=dashed, color="#2c78e4" arrowhead=none];
         }
         front_end_ssg -> front_end_ci_cd  [color="#2c78e4" arrowhead=none];
-        
     }
 
     me -> front_end [color="#2c78e4"  arrowhead=none];
