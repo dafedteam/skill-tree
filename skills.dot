@@ -53,7 +53,7 @@ digraph {
         }
         dev_setup -> os [color="#2c78e4" arrowhead=none];
     }
-    me -> dev_setup [color="#2c78e4" penwidth=3  arrowhead=none];
+    me -> dev_setup [color="#2c78e4" arrowhead=none];
 
     subgraph cluster_back_end {
         graph[style=dotted];
@@ -99,7 +99,7 @@ digraph {
 
                 php_docs -> doxygen [style=dashed, color="#2c78e4" arrowhead=none];
             }
-            php -> php_docs [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_docs [color="#2c78e4" arrowhead=none];
 
             php_ext [label="Extensions" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_ext {
@@ -112,7 +112,7 @@ digraph {
                 php_ext -> xdebug [style=dashed, color="#2c78e4" arrowhead=none];
                 xdebug -> kcachegrind [style=dashed, color="#9900ff" arrowhead=none];
             }
-            php -> php_ext [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_ext [color="#2c78e4" arrowhead=none];
 
             php_testing [label="Testing" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_testing {
@@ -127,7 +127,7 @@ digraph {
                 php_testing -> selenium [style=dashed, color="#2c78e4" arrowhead=none];
                 php_testing -> postman [style=dashed, color="#2c78e4" arrowhead=none];
             }
-            php -> php_testing [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_testing [color="#2c78e4" arrowhead=none];
 
             php_qa [label="QA" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_qa {
@@ -140,7 +140,7 @@ digraph {
                 php_qa -> phpcs [style=dashed, color="#2c78e4" arrowhead=none];
                 php_qa -> phpcbf [style=dashed, color="#2c78e4" arrowhead=none];
             }
-            php -> php_qa [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_qa [color="#2c78e4" arrowhead=none];
 
             php_packages [label="Packages" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_packages {
@@ -157,7 +157,7 @@ digraph {
                 php_packages -> tcpdf [style=dashed, color="#2c78e4" arrowhead=none];
                 php_packages -> dotenv [style=dashed, color="#2c78e4" arrowhead=none];
             }
-            php -> php_packages [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_packages [color="#2c78e4" arrowhead=none];
 
             php_frameworks [label="Frameworks" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
             subgraph cluster_php_frameworks {
@@ -168,12 +168,12 @@ digraph {
                 php_frameworks -> cakephp [style=dashed, color="#2c78e4" arrowhead=none];
                 php_frameworks -> laravel [style=dashed, color="#2c78e4" arrowhead=none];
             }
-            php -> php_frameworks [style=dashed, color="#2c78e4" arrowhead=none];
+            php -> php_frameworks [color="#2c78e4" arrowhead=none];
         }
 
-        back_end -> php  [style=dashed, color="#2c78e4" arrowhead=none];
+        back_end -> php  [color="#2c78e4" arrowhead=none];
     }
-    me -> back_end [color="#2c78e4" penwidth=3  arrowhead=none];
+    me -> back_end [color="#2c78e4" arrowhead=none];
 
     subgraph cluster_cloud {
         graph[style=dotted];
@@ -195,10 +195,10 @@ digraph {
             aws -> rds [style=dashed, color="#2c78e4" arrowhead=none];
             aws -> s3 [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        cloud -> aws [style=dashed, color="#2c78e4" arrowhead=none];
+        cloud -> aws [color="#2c78e4" arrowhead=none];
 
     }
-    me -> cloud [color="#2c78e4" penwidth=3  arrowhead=none];
+    me -> cloud [color="#2c78e4" arrowhead=none];
 
     front_end [label="Front End" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
     subgraph cluster_front_end {
@@ -212,7 +212,7 @@ digraph {
             front_end_frameworks -> bootstrap [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_frameworks -> angularjs [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        front_end -> front_end_frameworks  [style=dashed, color="#2c78e4" arrowhead=none];
+        front_end -> front_end_frameworks  [color="#2c78e4" arrowhead=none];
 
         front_end_packages [label="Packages" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_packages {
@@ -227,7 +227,7 @@ digraph {
             front_end_packages -> sweetalert [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_packages -> uigrid [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        front_end -> front_end_packages  [style=dashed, color="#2c78e4" arrowhead=none];
+        front_end -> front_end_packages  [color="#2c78e4" arrowhead=none];
 
         front_end_runners [label="Runners" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_runners {
@@ -235,7 +235,7 @@ digraph {
 
             front_end_runners -> gulp [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        front_end -> front_end_runners [style=dashed, color="#2c78e4" arrowhead=none];
+        front_end -> front_end_runners [color="#2c78e4" arrowhead=none];
 
         front_end_ssg [label="SSG" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_ssg {
@@ -248,7 +248,7 @@ digraph {
             front_end_ssg -> nuxt [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_ssg -> hugo [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        front_end -> front_end_ssg  [style=dashed, color="#2c78e4" arrowhead=none];
+        front_end -> front_end_ssg  [color="#2c78e4" arrowhead=none];
 
         front_end_ci_cd [label="CI/CD" shape="box" style=filled, fillcolor="#feff00" fontname = "helvetica"];
         subgraph cluster_front_end_ci_cd {
@@ -261,9 +261,9 @@ digraph {
             front_end_ci_cd -> github_actions [style=dashed, color="#2c78e4" arrowhead=none];
             front_end_ci_cd -> bitbucket_pipelines [style=dashed, color="#2c78e4" arrowhead=none];
         }
-        front_end_ssg -> front_end_ci_cd  [style=dashed, color="#2c78e4" arrowhead=none];
+        front_end_ssg -> front_end_ci_cd  [color="#2c78e4" arrowhead=none];
         
     }
 
-    me -> front_end [color="#2c78e4" penwidth=3  arrowhead=none];
+    me -> front_end [color="#2c78e4"  arrowhead=none];
 }
