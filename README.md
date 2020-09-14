@@ -12,6 +12,9 @@ git push
 
 git tag v0.0.1 -m 'Added new technology'
 git push origin v0.0.1
+
+# delete a remote tag
+git push --delete origin 1
 ```
 
 ![skills](/.github/img/skills.png)
