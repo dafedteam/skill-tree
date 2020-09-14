@@ -2,6 +2,8 @@
 
 Inspired by [roadmap.sh](https://github.com/kamranahmedse/developer-roadmap#introduction) - tree generated using `graphviz`
 
+Run `make all` - png, svg, html, pdf assets will be generated in `build/`
+
 ```shell
 # changes
 git add ..
