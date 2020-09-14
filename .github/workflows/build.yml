@@ -37,10 +37,3 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
-
-      - name: Update GitHub Profile README
-        uses: theboi/github-update-readme@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          footer: "![skills](${{ browser_download_url }}/skills.png)"
